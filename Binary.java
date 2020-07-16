@@ -1,10 +1,22 @@
-class BinarySearchExample{  
+import java.util.*;
+class Main{
+ public static void main(String args[]){  
 
- public static void binarySearch(int arr[], int first, int last, int key){  
+Scanner s=new Scanner(System.in);
+int size=s.nextInt();
+        int arr[] = new int[size]; 
+for(int i=0;i<arr.length;i++)
+{
+    arr[i]=s.nextInt();
+}
+int key=0;
+key=s.nextInt();
+int first=0;
+        int last=arr.length-1;  
+         int mid = (first + last)/2;  
 
-   int mid = (first + last)/2;  
-
-   while( first <= last ){  
+   while( first <= last )
+   {  
 
       if ( arr[mid] < key ){  
 
@@ -32,17 +44,7 @@ class BinarySearchExample{
 
    }  
 
- }  
-
- public static void main(String args[]){  
-
-        int arr[] = {10,20,30,40,50};  
-
-        int key = 30;  
-
-        int last=arr.length-1;  
-
-        binarySearch(arr,0,last,key);     
+          
 
  }  
 
