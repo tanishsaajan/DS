@@ -1,60 +1,57 @@
-import java.io.*; 
-import java.util.*;
-public class LinkedList { 
-  
-    Node head; 
-    static class Node { 
-  
-        int data; 
-        Node next; 
-  
-        Node(int d) 
-        { 
-            data = d; 
-            next = null; 
-        } 
-    } 
-    public static LinkedList insert(LinkedList list, int data) 
-    { 
-        Node new_node = new Node(data); 
-        new_node.next = null; 
-        if (list.head == null) { 
-            list.head = new_node; 
-        } 
-        else { 
-            Node last = list.head; 
-            while (last.next != null) { 
-                last = last.next; 
-            } 
-  
-            last.next = new_node; 
-        } 
-        return list; 
-    } 
-  
-    public static void printList(LinkedList list) 
-    { 
-        Node currNode = list.head; 
-   
-        System.out.print("LinkedList: "); 
-   
-        while (currNode != null) { 
-            System.out.print(currNode.data + " "); 
-            currNode = currNode.next; 
-        } 
-    } 
-    public static void main(String[] args) 
-    { 
-        LinkedList list = new LinkedList(); 
-        list = insert(list, 1); 
-        list = insert(list, 2); 
-        list = insert(list, 3); 
-        list = insert(list, 4); 
-        list = insert(list, 5); 
-        list = insert(list, 6); 
-        list = insert(list, 7); 
-        list = insert(list, 8); 
-  
-        printList(list); 
-    } 
-} 
+public class Main
+{
+
+	Node head;
+	static class Node
+	{
+		int data;
+		Node next;
+		Node(int x)
+		{
+			data=x;
+			next=null;
+		}
+	}
+  public static Main insertAtEnd(Main list , int data)
+	{
+		Node new_n=new Node(data);
+		if(list.head==null)
+		{
+			list.head=new_n;
+		}
+		else
+		{
+			Node n1=list.head;
+			while(n1.next!=null)
+			{
+				n1=n1.next;
+			}
+			n1.next=new_n;
+		}
+		return list;
+	}
+	static void printlist(Main list)
+	{
+		Node n2=list.head;
+		while(n2.next!=null)
+		{
+			System.out.println(n2.data);
+			n2=n2.next;
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Main list=new Main();
+		list=insertAtEnd(list,1);
+		list=insertAtEnd(list,2);
+		list=insertAtEnd(list,3);
+		list=insertAtEnd(list,4);
+		list=insertAtEnd(list,5);
+		list=insertAtEnd(list,6);
+		list=insertAtEnd(list,7);
+		list=insertAtEnd(list,8);
+		list=insertAtEnd(list,9);
+		list=insertAtEnd(list,10);
+		printlist(list);
+	}
+}
