@@ -12,21 +12,21 @@ public class Main
 			next=null;
 		}
 	}
-  public static Main insertAtEnd(Main list , int data)
+  public static Main insertAtBeg(Main list , int data)
 	{
-		Node new_n=new Node(data);
+		Node data1=new Node(data);
 		if(list.head==null)
 		{
-			list.head=new_n;
+			list.head=data1;
 		}
 		else
 		{
-			Node n1=list.head;
-			while(n1.next!=null)
+			Node temp=list.head;
+			while(temp.next!=null)
 			{
-				n1=n1.next;
+				temp=temp.next;
 			}
-			n1.next=new_n;
+			temp.next=data1;
 		}
 		return list;
 	}
@@ -42,16 +42,16 @@ public class Main
 	public static void main(String[] args) 
 	{
 		Main list=new Main();
-		list=insertAtEnd(list,1);
-		list=insertAtEnd(list,2);
-		list=insertAtEnd(list,3);
-		list=insertAtEnd(list,4);
-		list=insertAtEnd(list,5);
-		list=insertAtEnd(list,6);
-		list=insertAtEnd(list,7);
-		list=insertAtEnd(list,8);
-		list=insertAtEnd(list,9);
-		list=insertAtEnd(list,10);
+		list=insertAtBeg(list,1);
+		list=insertAtBeg(list,2);
+		list=insertAtBeg(list,3);
+		list=insertAtBeg(list,4);
+		list=insertAtBeg(list,5);
+		list=insertAtBeg(list,6);
+		list=insertAtBeg(list,7);
+		list=insertAtBeg(list,8);
+		list=insertAtBeg(list,9);
+		list=insertAtBeg(list,10);
 		printlist(list);
 	}
 }
