@@ -4,13 +4,14 @@ public class Main {
         int data;  
         Node next;  
   
-        public Node(int data) {  
-            this.data = data;  
-            this.next = null;  
+       Node(int val) {  
+            data = val;  
+           next = null;  
         }  
     }  
-    public Node head = null;  
-    public Node tail = null;  
+   Node head = null;  
+   Node tail = null;  
+     
      public void atEnd(int data) {  
          Node newNode = new Node(data);
           if(head == null) {  
@@ -39,10 +40,8 @@ public class Main {
     public static void main(String[] args) {  
   
         Main list = new Main();  
-    list.atEnd(55);  
-        list.display();  
-   list.atEnd(26);  
-        list.display();  
+    list.atEnd(55); 
+   list.atEnd(26);   
    list.atEnd(45);  
         list.display(); 
         Scanner obj=new Scanner(System.in);
