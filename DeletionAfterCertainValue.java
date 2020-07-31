@@ -66,6 +66,7 @@ public class Main {
 
         list.display();
    Scanner s=new Scanner(System.in);
+   System.out.println("Enter the position of node you want to delete");
    int pos=s.nextInt();
    list.delete(pos);
   
