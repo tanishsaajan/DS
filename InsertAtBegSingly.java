@@ -1,54 +1,63 @@
-public class Main
-{
-
-	Node head;
-	static class Node
-	{
-		int data;
-		Node next;
-		Node(int x)
-		{
-			data=x;
-			next=null;
-		}
-	}
-  public static Main insertAtBeg(Main list , int data)
-	{
-		Node data1=new Node(data);
-		if(list.head==null)
-		{
-			list.head=data1;
-		}
-		else
-		{
-			Node temp=list.head;
-			data1.next=temp;
-			temp=data1;
-		}
-		return list;
-	}
-	static void printlist(Main list)
-	{
-		Node n2=list.head;
-		while(n2.next!=null)
-		{
-			System.out.println(n2.data);
-			n2=n2.next;
-		}
-	}
-	public static void main(String[] args) 
-	{
-		Main list=new Main();
-		list=insertAtBeg(list,1);
-		list=insertAtBeg(list,2);
-		list=insertAtBeg(list,3);
-		list=insertAtBeg(list,4);
-		list=insertAtBeg(list,5);
-		list=insertAtBeg(list,6);
-		list=insertAtBeg(list,7);
-		list=insertAtBeg(list,8);
-		list=insertAtBeg(list,9);
-		list=insertAtBeg(list,10);
-		printlist(list);
-	}
+import java.util.*;
+public class Main {  
+     class Node{  
+        int data;  
+        Node next;  
+        Node prev;
+  
+       Node(int val) {  
+            data = val;  
+           next = null;  
+        }  
+    }  
+   Node head = null;  
+   Node tail = null;  
+     
+     public void atEnd(int data) {  
+         Node newNode = new Node(data);
+          if(head == null) {  
+              head = newNode;  
+            tail = newNode;  
+        }  
+        else {  
+              tail.next = newNode;
+              newNode.prev=tail;
+            tail = newNode;  
+        }  
+    }  
+    public void InsertAtBeg(int value)
+    {
+        Node v=new Node(value);
+        v.next=head;
+        head=v;
+    
+    }
+    public void display() {  
+         Node current = head;  
+        if(head == null) {  
+            System.out.println("Empty List");  
+            return;  
+        }  
+         System.out.println("The list is:- ");
+        while(current != null) {  
+             System.out.print(current.data + " ");  
+            current = current.next;  
+        }  
+        System.out.println();  
+    }  
+  
+    public static void main(String[] args) {  
+  
+        Main list = new Main();  
+    list.atEnd(55); 
+   list.atEnd(26);   
+   list.atEnd(45);  
+        list.display(); 
+        Scanner obj=new Scanner(System.in);
+        System.out.print("Enter the element you want to add at the begining:- ");
+        int x=obj.nextInt();
+        System.out.println(x);
+        list.InsertAtBeg(x);
+        list.display();
+    }  
 }
