@@ -1,21 +1,22 @@
+  
 import java.util.*;
 class Stack{
      int x=0;
   int top=-1;
   int size=1000;
   int a[]=new int[size];
-  boolean push(int arr[])
+  void push(int arr[])
   {
       if(top>=size-1)
       {
           System.out.println("StackOverflowError");
-          return false;
+          
       }
       else{
           top=top+1;
           a[top]=arr[top];
            System.out.println(a[top] + " pushed into stack"); 
-            return true; 
+          
         } 
       
   }
