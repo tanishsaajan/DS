@@ -9,13 +9,9 @@ void Enqueue(int n)
     {
         System.out.println("Queue is full");
     }
-    else if(front==-1&&rear==-1)
-    {
-        front=rear=0;
-        que[rear]=n;
-    }
     else
     {
+        front=0;
         rear++;
         que[rear]=n;
     }
