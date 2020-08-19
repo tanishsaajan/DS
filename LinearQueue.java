@@ -20,10 +20,6 @@ void Dequeue()
 {
     if(rear==-1&&front==-1)
     {
-        
-        System.out.println("Queue is empty");
-    }
-    else if(front==rear){
       front=rear=-1;
     }
     else{
@@ -35,9 +31,17 @@ void Dequeue()
 void display()
 {
     int i=0;
+    
+    if(rear==front)
+    {
+        
+        System.out.println("Queue is empty");
+    }
+    else{
     for( i=front;i<=rear;i++)
     {
         System.out.print(que[i]+" ");
+    }
     }
 }
    
@@ -47,7 +51,7 @@ class Main
 {
 	public static void main(String[] args) {
 	    Queue q=new Queue();
-	     
+	    q.display();
 	    q.Enqueue(1);
 	    	    q.Enqueue(2);
 	    	    	    q.Enqueue(3);
