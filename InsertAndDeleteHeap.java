@@ -1,11 +1,3 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 public class Main
 {
     static void heapify(int arr[],int n,int i)
@@ -14,11 +6,11 @@ public class Main
         int largest=i;
         int left=2*i;
         int right=2*i+1;
-        if(arr[left]>arr[largest])
+        if(left<=n &&arr[left]>arr[largest])
         {
             largest=left;
         }
-        if(arr[right]>arr[largest])
+        if(right<=n&&arr[right]>arr[largest])
         {
             largest=right;
         }
